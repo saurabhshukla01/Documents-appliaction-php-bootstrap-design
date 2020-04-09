@@ -1,0 +1,67 @@
+ <!-- foooter-->
+ <footer>
+		
+      <div class="copyright">
+         Please Note***** GoGetScore will never ask you to make a payment anywhere outside the secure GoGetScore website. DO NOT make payment to any other bank account or wallet or divulge your bank/card details to fraudsters and imposters claiming to be operating on our behalf.
+      </div>
+	  <div class="text-center">
+			<ul class="ml-lg-auto">
+                     <li class="mr-3">
+                        <a href="<?php base_url();?>">Home</a>
+                     </li>
+                     <li class="mr-3">
+                        <a href="<?php base_url();?>about-us.php">About Us</a>
+                     </li>
+                     <li class="mr-3">
+                        <a href="<?php base_url();?>/term-and-condition.php">Terms & Conditions</a>
+                     </li>
+					 <li class="mr-3">
+						<a href="<?php base_url();?>/privacy-policy.php">Privacy Policy</a>
+					</li>
+                     <li>
+						<a href="<?php base_url();?>/contact-us.php">Contact Us</a>
+                     </li>
+                  </ul>
+		</div>
+	  </footer>
+      <!-- footer-->
+      <script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="<?php echo base_url();?>/assets/css/jquery-ui.css">
+      <script src="<?php echo base_url();?>assets/js/jquery-ui.min.js"></script>
+      <script>	  	  	   $( function() {    $( "#user_dob" ).datepicker({      changeMonth: true,      changeYear: true,	  yearRange: '-80y:c+nn',            maxDate: '-1d'    });  } );      
+         //$( function() {
+           //$( "#user_dob" ).datepicker();		   
+         //} );
+      </script>
+	  <script>
+			$('.date-form-input').click(function(){
+				 $(this).parents('.form-group').addClass('focused');
+			//	 $('.small-date').show();
+				// $('.large-date').hide();
+			   });
+			</script>
+      <script>
+         $('.form-input').click(function(){
+           $(this).parents('.form-group').addClass('focused');
+         });
+         
+         $('.form-input').blur(function(){
+           var inputValue = $(this).val();
+           if ( inputValue == "" ) {
+             $(this).removeClass('filled');
+             $(this).parents('.form-group').removeClass('focused');  
+           } else {
+             $(this).addClass('filled');
+           }
+         })  
+         
+      </script>
+	  <script>
+	  $('.date-form-input').click(function(){
+           $(this).parents('.form-group').addClass('focused');
+		   $('.small-date').show();
+		   $('.large-date').hide();
+         });
+	  </script>
+   </body>
+</html>
